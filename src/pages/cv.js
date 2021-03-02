@@ -7,6 +7,7 @@ import Publication from "../components/Publication";
 
 import PublicationsYAML from "../content/cv/publications.yaml";
 import WebToolsYAML from "../content/cv/webtools.yaml";
+import PostersYAML from "../content/cv/posters.yaml";
 
 import styles from "./cv.module.scss";
 
@@ -76,6 +77,20 @@ const CVPage = ({ location }) => {
               index={`C${conferencePublications.length - i}`}
               data={pub}
             />
+          ))}
+        </div>
+
+        <div className="publication-group">
+          <h3 style={show("en")}>Posters ({PostersYAML.length})</h3>
+          <h3 style={show("fr")}>posters ({PostersYAML.length})</h3>
+          {PostersYAML.map((poster, i) => (
+            <div>
+              <b>[P{PostersYAML.length - i}]</b> {poster.title}, {poster.event},{" "}
+              {poster.date}.{" "}
+              {poster.filename && (
+                <a href={`/posters/${poster.filename}`}>[Poster]</a>
+              )}
+            </div>
           ))}
         </div>
 

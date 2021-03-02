@@ -1,9 +1,22 @@
 - title: "Machine Learning in Audiology: Applications and Implications"
   event: Ottawa-AI Alliance Workshop
   location: "Ottawa, ON"
-  date: October 19th, 2018
+  date: October 2018
+
+- title: "Systematic Street View Sampling for Accurate Urban Population Estimation"
+  event: Data Day 5.0
+  location: "Ottawa, ON"
+  filename: "census_charih_2018.pdf"
+  date: May 2018
 
 - title: "Extending the SHOEBOX Audiometry mobile audiometer with an automated audiogram classification system"
   event: Life Science Day 2.0, Carleton University
   location: "Ottawa, ON"
-  date: May 30th, 2018
+  filename: "shoeboxai_charih_2017.pdf"
+  date: May 2018
+
+- title: "Structural insights into the DNA Binding Activity of the Ferric Uptake Regulator in Campylobacter jejuni"
+  event: "Honours Project Poster Day"
+  location: "Ottawa, ON"
+  filename: "honours_charih_2015.pdf"
+  date: April, 2015
