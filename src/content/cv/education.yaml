@@ -1,0 +1,29 @@
+- degree: M.A.Sc. Electrical and Computer Engineering (Data Science)
+  school: Carleton University
+  location: "Ottawa, ON"
+  advisor: James R. Green
+  advisorurl: "http://www.sce.carleton.ca/faculty/green/green.php"
+  thesistitle: "Machine Learning in Audiology: Applications and Implications"
+  years: 2016 - 2018
+
+- degree: B.Sc.(Hons.) Biochemistry
+  school: University of Ottawa
+  location: "Ottawa, ON"
+  years: 2010 - 2016
+  advisor: Jean-François Couture
+  advisorurl: "https://research.uottawa.ca/people/couture-jean-francois"
+  thesistitle: Structural Insights into the DNA-Binding Activity of Metalloregulator Fur in C. jejuni
+
+- degree: B.A.Sc. Chemical Engineering
+  school: University of Ottawa
+  location: "Ottawa, ON"
+  years: 2010 - 2016
+  thesistitle: Design, Simulation and Optimization of a High Production Volume Toluene Plant
+
+  #  - degree: High School Diploma
+  # school: Collège Saint-Alexandre de la Gatineau
+  # location: "Gatineau, QC"
+  # years: 2004 - 2009
+
+
+

@@ -1,0 +1,23 @@
+- student: Abhinav Yalamanchili
+  type: M.Eng. Student
+  project: "Machine vision to digitize audiogram images (with WSIB Ontario)"
+  location: Carleton University
+  date: Summer 2020
+
+- student: Ahmed Abdelrazik
+  type: Undergraduate Student
+  project: "Development of an ergonomic audiogram digitization tool (with WSIB Ontario)"
+  location: Carleton University
+  date: Summer 2020
+
+- student: Pratyush Singh
+  type: Undergraduate Student
+  project: "Machine vision to digitize audiogram images"
+  location: Carleton University
+  date: Summer 2018
+
+- student: Ashlynn Steeves
+  type: Undergraduate Student
+  project: "Using kNN to impute values in incomplete audiograms"
+  location: Carleton University
+  date: Winter 2018

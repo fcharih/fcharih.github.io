@@ -1,0 +1,299 @@
+\documentclass[11pt]{article}
+
+% only if the base font of the document is to be sans serif
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+%\usepackage{helvet}
+\usepackage{fontspec}
+\setmainfont{Palatino}
+
+
+\usepackage{amsmath}
+\usepackage[style=trad-abbrv]{biblatex}
+\usepackage{MnSymbol}
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
+\usepackage{wasysym}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{multicol}
+\def\UrlBreaks{\do\/\do-}
+\usepackage{ifthen} % provides \ifthenelse test  
+\usepackage{xifthen} % provides \isempty test
+\usepackage[margin=0.75in]{geometry}
+% Do not indent anything
+\setlength\parindent{0pt}
+
+\addbibresource{temp.bib}
+
+
+\fancyfoot[R]{\textit{Last updated: \today}}
+\fancyfoot[L]{\textit{Built with \faHeart\ (and \LaTeX)}}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+
+% Defining my colors
+\definecolor{quebecblue}{HTML}{1c5ba2}
+\newcommand{\siteurl}[2]{{\href{#2}{\textcolor{quebecblue}{#1}}}}
+
+% Header definition
+\newcommand{\header}[1]{\begin{center}{\large \sc \bf #1}\end{center}\\}
+
+\preto\fullcite{\AtNextCite{\defcounter{maxnames}{99}}}
+
+
+% Education entry
+\newcommand{\education}[7]{
+	\begin{minipage}[t]{0.8\textwidth}
+	{\bf #1}\\
+	#6\\
+	\ifthenelse{\equal{#3}{}}{}{Advisor: \siteurl{#3}{#4}\\}
+	\ifthenelse{\equal{#5}{}}{}{Thesis: {\it #5}\\}
+\end{minipage}
+\begin{minipage}[t]{0.2\textwidth}
+	\flushright
+	#2\\
+	\faMapMarker\ #7
+\end{minipage}
+}
+
+% Poster entry
+\newcommand{\poster}[6]{
+	\begin{minipage}[t]{0.8\textwidth}
+	[#5#6] {\bf #1}\\
+	#2
+\end{minipage}
+\begin{minipage}[t]{0.2\textwidth}
+	\flushright
+	#4\\
+	\faMapMarker\ #3
+\end{minipage}\\
+}
+
+% Award entry
+\newcommand{\award}[5]{
+	\begin{minipage}[t]{0.8\textwidth}
+		{\bf #1}, {#2}\ifthenelse{\equal{#3}{}}{}{ (#3)}\\
+	\ifthenelse{\equal{#5}{}}{}{#5\\}
+\end{minipage}
+\begin{minipage}[t]{0.2\textwidth}
+	\flushright
+	#4
+\end{minipage}
+}
+
+
+% Mentoring entry
+\newcommand{\mentoring}[5]{
+	\begin{minipage}[t]{0.8\textwidth}
+		{\bf #1}, #2\\
+    \textit{#3}\\
+\end{minipage}
+\begin{minipage}[t]{0.2\textwidth}
+	\flushright
+	#4
+\end{minipage}
+}
+
+
+
+%\newcommand*{\showme}[1]{\mkbibbold{#1}}
+
+\begin{document}
+\normalfont
+\header{\LARGE{François Charih}}
+
+\vspace{\baselineskip}
+
+Carleton University Biomedical Informatics Colaboratory (cuBIC)\\
+Office: Room 6105, Canal Bldg., Carleton University\\
+1125, Colonel By Drive\\
+Ottawa, ON (K1S 5B6)\\
+\faEnvelopeO\ \href{mailto:francois@charih.ca}{\textcolor{quebecblue}{francois@charih.ca}}\\
+\faGlobe\ \siteurl{http://www.charih.ca}{http://www.charih.ca}}
+
+
+\header{Research Interests}
+\begin{center}
+\begin{minipage}{0.3\textwidth}
+Computational biochemistry\\
+Applied machine learning
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+High performance computing\\
+Protein biochemistry
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+Motor neuron diseases\\
+Cancer
+\end{minipage}
+\end{center}
+
+\header{Education}
+
+\begin{minipage}[t]{0.8\textwidth}
+  {\bf Ph.D. Electrical and Computer Engineering (Computational Biochemistry)}\\
+	Carleton University \\
+  \ifthenelse{\equal{#3}{}}{}{Advisors: \siteurl{James R. Green (Engineering)}{http://www.sce.carleton.ca/faculty/green/green.php} and
+  \siteurl{Kyle K. Biggar (Biochemistry)}{https://carleton.ca/biology/people/kyle-biggar/}\\}
+    Thesis: {\it Computational methods to uncover and modulate the methyllysine proteome}\\
+\end{minipage}
+\begin{minipage}[t]{0.2\textwidth}
+	\flushright
+	2019 -\ \ \ \ \ \ \ \ \ \\
+	\faMapMarker\ Ottawa, ON
+\end{minipage}
+
+\BLOCK{ for degree in degrees }
+\education{\VAR{degree.degree}}{\VAR{degree.years}}{\VAR{degree.advisor}}{\VAR{degree.advisorurl}}{\VAR{degree.thesistitle}}{\VAR{degree.school}}{\VAR{degree.location}}
+\BLOCK{ endfor }
+
+\header{Recent Employment}
+
+\nopagebreak
+\BLOCK{ for employment in employments }
+	\begin{minipage}[t]{0.8\textwidth}
+		{\bf \VAR{employment.title}}\\
+		\VAR{employment.employer}\\
+	\end{minipage}
+	\begin{minipage}[t]{0.2\textwidth}
+		\flushright
+		\VAR{employment.years}\\
+		\faMapMarker\ \VAR{employment.location}
+	\end{minipage}
+	\begin{itemize}[noitemsep,nolistsep]
+	\BLOCK{ for detail in employment.details }
+		\item \VAR{detail}
+	\BLOCK{ endfor }
+\end{itemize}
+
+	\vspace{\baselineskip}
+
+\BLOCK{ endfor }
+
+\header{Publications}
+
+\nopagebreak
+\textit{Peer-Reviewed Journal Articles}\\
+
+\nopagebreak
+\BLOCK{for publication in publications if publication.type == "journal"}
+
+[J\VAR{loop.revindex}] \VAR{publication.string}\\
+
+\BLOCK{ endfor }
+
+\textit{Conference Proceedings}\\
+
+\nopagebreak
+\BLOCK{ for publication in publications if publication.type == "conference"}
+
+[C\VAR{loop.revindex}] \VAR{publication.string}\\
+
+\BLOCK{ endfor }
+
+
+\textit{Other Manuscripts (e.g. pre-prints, theses, etc.)}\\
+
+\nopagebreak
+\BLOCK{ for publication in publications if (publication.type != "journal" and publication.type != "conference")}
+
+[O\VAR{loop.revindex}] \VAR{publication.string}\\
+
+\BLOCK{ endfor }
+
+\header{Presentations and Workshops}
+
+\nopagebreak
+\BLOCK{ for presentation in presentations }
+
+\poster{\VAR{presentation.title}}{\VAR{presentation.event}}{\VAR{presentation.location}}{\VAR{presentation.date}}{PW}{\VAR{loop.revindex}}\\
+
+\BLOCK{ endfor }
+
+
+\header{Selected Posters}
+
+\nopagebreak
+\BLOCK{ for poster in posters }
+
+\poster{\VAR{poster.title}}{\VAR{poster.event}}{\VAR{poster.location}}{\VAR{poster.date}}{P}{\VAR{loop.revindex}}\\
+
+\BLOCK{ endfor }
+
+
+\header{Awards and Honours}
+
+\nopagebreak
+\BLOCK{ for award in awards }
+\award{\VAR{award.title}}{\VAR{award.source}}{\VAR{award.value}}{\VAR{award.year}}{\VAR{award.comment}}\\
+
+\BLOCK{ endfor }
+
+\header{Research Mentoring}
+
+\nopagebreak
+I have had the great pleasure to act as a mentor to the following students:\\
+
+\BLOCK{ for student in mentoring }
+\mentoring{\VAR{student.student}}{\VAR{student.type}}{\VAR{student.project}}{\VAR{student.date}}\\
+\BLOCK{ endfor }
+
+\header{Other}
+
+\nopagebreak
+\BLOCK{ for award in involvement }
+\award{\VAR{award.title}}{\VAR{award.source}}{\VAR{award.value}}{\VAR{award.year}}{\VAR{award.comment}}\\
+
+\BLOCK{ endfor }
+
+\header{Languages}
+\begin{itemize}
+	\itemsep0em
+  \item French (native)
+  \item English (fluent)
+  \item Arabic (elementary conversational skills)
+\end{itemize}
+
+\header{Relevant skills}
+\nopagebreak
+
+\textbf{High-performance computing}
+\begin{itemize}
+  \item Development of concurrent software for scientific applications using low level languages (Rust, C, Java) and high level languages (Python)
+  \item Multithreading (OpenMP)
+  \item Distributed computing (MPI)
+  \item General-purpose GPU programming (GPGPU)
+\end{itemize}
+
+\textbf{Statistical data analysis/visualization:}
+\begin{itemize}
+  \item Frequentist and bayesian modelling
+  \item Data processing and exploration
+  \item Interactive data visualization with D3.js
+	\item Machine learning (supervised and unsupervised)
+	\item Deep learning
+\end{itemize}
+
+
+\textbf{Bioinformatics:}
+\begin{itemize}
+  \item Application of machine learning techniques to biological datasets
+  \item Sequence alignment
+  \item Protein modelling and analysis
+	\item Protein-ligand docking
+\end{itemize}
+
+
+\textbf{Web development:}
+\begin{itemize}
+  \item Development and maintenance of web infrastructures (web servers, REST APIs, databases, websites) in the cloud (AWS/Google Cloud)
+	\item Creation of clean, maintainable web applications using modern web technologies (React.js, Express.js, Flask, Postgresql, Docker).
+\end{itemize}
+\end{document}
+
+
+% Local Variables:
+% TeX-engine: luatex
+% End:

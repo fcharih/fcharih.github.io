@@ -1,0 +1,52 @@
+html,
+body {
+  font-family: Avenir;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  background: url(/wallpaper.jpg);
+}
+
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+  margin: 0px;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 0.8rem;
+  }
+}
+
+a {
+  color: #7c009c;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: blue;
+}
+
+em {
+  color: #1e9ee3;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h2,
+h3 {
+  text-align: center;
+}

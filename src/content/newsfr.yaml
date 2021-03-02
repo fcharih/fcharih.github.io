@@ -1,0 +1,42 @@
+- title: Publication d'un article sur l'application de MethylSight
+  date: Décembre 2020
+  content: "Je suis heureux d'annoncer que mon nouvel article [Using Machine Learning and Targeted Mass Spectrometry to Explore the Methyl-Lys Proteome](https://star-protocols.cell.com/protocols/217)
+  a récemment paru dans la revue savante STAR Protocols (Cell Press). Cet article accompagne l'article publié en juillet dernier et présente
+  un protocle décrivant l'application du prédicteur de méthylation MethylSight couplée à l'utilisation de spectrométrie de masse pour découvrir
+  et valider de nouveaux sites de méthylation des lysines dans le protéome."
+
+- title: Publication de l'article sur MethylSight
+  date: Juillet 2020
+  content: "C'est avec beaucoup de fierté que j'annonce que l'article [Proteome-wide Prediction
+  of Lysine Methylation Reveals Novel Histone Marks and Outlines the Methyllysine Proteome](https://www.cell.com/cell-reports/pdf/S2211-1247(20)30877-9.pdf)
+  dont je suis premier auteur avec mon co-directeur de recherche, Kyle Biggar, a été publié dans la prestigieuse revue savante
+  *Cell Reports*. Dans cette article, nous introduisons [MethylSight](https://methylsight.com), un modèle d'apprentissage automatique
+  dédié à la prédiction de sites de méthylation des lysines au sein du protéome humain."
+
+- title: Entrevue de Jim avec Radio-Canada Ottawa sur notre projet concernant la COVID-19
+  date: Juin 2020
+  content: "Mon directeur de recherche, Jim Green, a accordé une entrevue à Radio-Canada portant sur notre projet sur la COVID-19.
+  Dans cette entrevue, Jim explqieu comment nous appliquons des méthodes telles que les
+  [algorithmes génétiques](https://en.wikipedia.org/wiki/Genetic_algorithm) et des prédicteurs d'interactions entre les protéines
+  dans le but de concevoir de nouveau inhibiteurs peptidiques capables, on l'espère, d'interrompre les interactions entre les protéines
+  virales de SARS-CoV-2 et les protéines humaines qui favorise la pénétration et la réplication du virus dans le corps. Ce travail de
+  nature collaborative implique Jim, mon collègue [Kevin Dick](https://kevindick.ai), mon autre co-directeur de recherche Kyle Biggar, quelques-uns
+  de ses étudiants, ainsi que moi-même.
+  <div style=\"margin: 20px auto; text-align: center;\">
+    <audio controls>
+        <source class=\"center\" src=\"/jim_interview_15june2020.mp3\" type=\"audio/mpeg\">
+    </audio>
+  </div>
+  "
+
+- title: Complétion de mon examen de synthèse doctoral
+  date: Mai 2020
+  content: "Je suis heureux d'annoncer que j'ai complété avec succès mon examen de synthèse, une étape saillante des études doctorales. Le domaine de
+  l'examen s'étendait des débuts de l'intelligence artificielle (logique de premier ordre, algorithmes de parcours des graphes, recherche locale, etc.)
+  jusqu'au avancées récentes en apprentissage automatique (apprentissage profond). J'aime plaisanter et dire que cette examen m'a frit le cerveau et qu'il
+  manque juste un peu de sel. Bon! De retour au boulot! 👨🏾‍💻"
+
+- title: Prix Douglas Miller
+  date: Mars 2020
+  content: "C'est avec grand plaisir que j'annonce que je suis récipiendaire du Prix Douglas Millar scholarship (3,200CAD) décerné annuellement 
+  a un étudiant diplômé qui se démarque en génie." 

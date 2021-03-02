@@ -1,0 +1,421 @@
+\documentclass[11pt]{article}
+
+% only if the base font of the document is to be sans serif
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+%\usepackage{helvet}
+\usepackage{fontspec}
+\setmainfont{Palatino}
+
+
+\usepackage{amsmath}
+\usepackage[style=trad-abbrv]{biblatex}
+\usepackage{MnSymbol}
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
+\usepackage{wasysym}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{multicol}
+\def\UrlBreaks{\do\/\do-}
+\usepackage{ifthen} % provides \ifthenelse test  
+\usepackage{xifthen} % provides \isempty test
+\usepackage[margin=0.75in]{geometry}
+% Do not indent anything
+\setlength\parindent{0pt}
+
+\addbibresource{temp.bib}
+
+
+\fancyfoot[R]{\textit{Last updated: \today}}
+\fancyfoot[L]{\textit{Built with \faHeart\ (and \LaTeX)}}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+
+% Defining my colors
+\definecolor{quebecblue}{HTML}{1c5ba2}
+\newcommand{\siteurl}[2]{{\href{#2}{\textcolor{quebecblue}{#1}}}}
+
+% Header definition
+\newcommand{\header}[1]{\begin{center}{\large \sc \bf #1}\end{center}\\}
+
+\preto\fullcite{\AtNextCite{\defcounter{maxnames}{99}}}
+
+
+% Education entry
+\newcommand{\education}[7]{
+	\begin{minipage}[t]{0.8\textwidth}
+	{\bf #1}\\
+	#6\\
+	\ifthenelse{\equal{#3}{}}{}{Advisor: \siteurl{#3}{#4}\\}
+	\ifthenelse{\equal{#5}{}}{}{Thesis: {\it #5}\\}
+\end{minipage}
+\begin{minipage}[t]{0.2\textwidth}
+	\flushright
+	#2\\
+	\faMapMarker\ #7
+\end{minipage}
+}
+
+% Poster entry
+\newcommand{\poster}[6]{
+	\begin{minipage}[t]{0.8\textwidth}
+	[#5#6] {\bf #1}\\
+	#2
+\end{minipage}
+\begin{minipage}[t]{0.2\textwidth}
+	\flushright
+	#4\\
+	\faMapMarker\ #3
+\end{minipage}\\
+}
+
+% Award entry
+\newcommand{\award}[5]{
+	\begin{minipage}[t]{0.8\textwidth}
+		{\bf #1}, {#2}\ifthenelse{\equal{#3}{}}{}{ (#3)}\\
+	\ifthenelse{\equal{#5}{}}{}{#5\\}
+\end{minipage}
+\begin{minipage}[t]{0.2\textwidth}
+	\flushright
+	#4
+\end{minipage}
+}
+
+
+% Mentoring entry
+\newcommand{\mentoring}[5]{
+	\begin{minipage}[t]{0.8\textwidth}
+		{\bf #1}, #2\\
+    \textit{#3}\\
+\end{minipage}
+\begin{minipage}[t]{0.2\textwidth}
+	\flushright
+	#4
+\end{minipage}
+}
+
+
+
+%\newcommand*{\showme}[1]{\mkbibbold{#1}}
+
+\begin{document}
+\normalfont
+\header{\LARGE{François Charih}}
+
+\vspace{\baselineskip}
+
+Carleton University Biomedical Informatics Colaboratory (cuBIC)\\
+Office: Room 6105, Canal Bldg., Carleton University\\
+1125, Colonel By Drive\\
+Ottawa, ON (K1S 5B6)\\
+\faEnvelopeO\ \href{mailto:francois@charih.ca}{\textcolor{quebecblue}{francois@charih.ca}}\\
+\faGlobe\ \siteurl{http://www.charih.ca}{http://www.charih.ca}}
+
+
+\header{Research Interests}
+\begin{center}
+\begin{minipage}{0.3\textwidth}
+Computational biochemistry\\
+Applied machine learning
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+High performance computing\\
+Protein biochemistry
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+Motor neuron diseases\\
+Cancer
+\end{minipage}
+\end{center}
+
+\header{Education}
+
+\begin{minipage}[t]{0.8\textwidth}
+  {\bf Ph.D. Electrical and Computer Engineering (Computational Biochemistry)}\\
+	Carleton University \\
+  \ifthenelse{\equal{#3}{}}{}{Advisors: \siteurl{James R. Green (Engineering)}{http://www.sce.carleton.ca/faculty/green/green.php} and
+  \siteurl{Kyle K. Biggar (Biochemistry)}{https://carleton.ca/biology/people/kyle-biggar/}\\}
+    Thesis: {\it Computational methods to uncover and modulate the methyllysine proteome}\\
+\end{minipage}
+\begin{minipage}[t]{0.2\textwidth}
+	\flushright
+	2019 -\ \ \ \ \ \ \ \ \ \\
+	\faMapMarker\ Ottawa, ON
+\end{minipage}
+
+\education{M.A.Sc. Electrical and Computer Engineering (Data Science)}{2016 - 2018}{James R. Green}{http://www.sce.carleton.ca/faculty/green/green.php}{Machine Learning in Audiology: Applications and Implications}{Carleton University}{Ottawa, ON}
+\education{B.Sc.(Hons.) Biochemistry}{2010 - 2016}{Jean-François Couture}{https://research.uottawa.ca/people/couture-jean-francois}{Structural Insights into the DNA-Binding Activity of Metalloregulator Fur in C. jejuni}{University of Ottawa}{Ottawa, ON}
+\education{B.A.Sc. Chemical Engineering}{2010 - 2016}{}{}{Design, Simulation and Optimization of a High Production Volume Toluene Plant}{University of Ottawa}{Ottawa, ON}
+
+\header{Recent Employment}
+
+\nopagebreak
+	\begin{minipage}[t]{0.8\textwidth}
+		{\bf Lead Researcher (Contractual position)}\\
+		Carleton University\\
+	\end{minipage}
+	\begin{minipage}[t]{0.2\textwidth}
+		\flushright
+		Summer 2020\\
+		\faMapMarker\ Ottawa, ON
+	\end{minipage}
+	\begin{itemize}[noitemsep,nolistsep]
+			\item Collaboration initiated by the WSIB of Ontario upon reading my master's thesis
+			\item Managed a team composed of myself, one M.Eng. student, and one undergraduate student
+			\item Responsible for developing a semi-automated audiogram digitization/interpretation solution using machine learning and computer vision to support the claim adjudication process at WSIB
+	\end{itemize}
+
+	\vspace{\baselineskip}
+
+	\begin{minipage}[t]{0.8\textwidth}
+		{\bf Contract Researcher}\\
+		The Ottawa Hospital Rehabilitation Centre\\
+	\end{minipage}
+	\begin{minipage}[t]{0.2\textwidth}
+		\flushright
+		2018 - 2019\\
+		\faMapMarker\ Ottawa, ON
+	\end{minipage}
+	\begin{itemize}[noitemsep,nolistsep]
+			\item Responsible for the implementation of a tablet-based software for the annotation of stress levels of PTSD/TBI patients undergoing VR therapy (collaboration with Rehabilitation Virtual Reality Lab at The Ottawa Hospital).
+	\end{itemize}
+
+	\vspace{\baselineskip}
+
+	\begin{minipage}[t]{0.8\textwidth}
+		{\bf Contract Researcher}\\
+		Natural Resources Canada\\
+	\end{minipage}
+	\begin{minipage}[t]{0.2\textwidth}
+		\flushright
+		2017 - 2018\\
+		\faMapMarker\ Ottawa, ON
+	\end{minipage}
+	\begin{itemize}[noitemsep,nolistsep]
+			\item Co-authored a technical report detailing how deep learning strategies can be deployed for passive monitoring of critical electrical infrastructure
+			\item Responsible for the annotation of thousands of images for the development of deep learning-based segmentation models
+	\end{itemize}
+
+	\vspace{\baselineskip}
+
+	\begin{minipage}[t]{0.8\textwidth}
+		{\bf Teaching Assistant}\\
+		Carleton University\\
+	\end{minipage}
+	\begin{minipage}[t]{0.2\textwidth}
+		\flushright
+		2017 -\ \ \ \ \ \ \ \ \ \\
+		\faMapMarker\ Ottawa, ON
+	\end{minipage}
+	\begin{itemize}[noitemsep,nolistsep]
+			\item SYSC2002 - Data Structures and Algorithms (Spring 2020)
+			\item SYSC2006 - Foundations of Imperative Programming (Fall 2017, Winter 2019)
+	\end{itemize}
+
+	\vspace{\baselineskip}
+
+	\begin{minipage}[t]{0.8\textwidth}
+		{\bf Undergraduate Research Assistant}\\
+		Ottawa Institute of Systems Biology\\
+	\end{minipage}
+	\begin{minipage}[t]{0.2\textwidth}
+		\flushright
+		2014 - 2016\\
+		\faMapMarker\ Ottawa, ON
+	\end{minipage}
+	\begin{itemize}[noitemsep,nolistsep]
+			\item Successfully crystallized and contributed to the resolution of the crystal structure of the protein under study
+			\item Performed and optimized a variety of biochemistry techniques, including protein overexpression, mutational studies, structural characterization and protein-DNA interaction studies
+			\item Used tools including high-throughput crystallization robots, x-ray diffractometer, FPLC/HPLC, protein modelling software, isothermal titration calorimetry on a regular basis in addition to applying other common techniques
+	\end{itemize}
+
+	\vspace{\baselineskip}
+
+
+\header{Publications}
+
+\nopagebreak
+\textit{Peer-Reviewed Journal Articles}\\
+
+\nopagebreak
+
+[J7] G.M. Rurak, S. Simard, \textbf{{\underline{{F. Charih}}}}, A. Van Geel, J. Stead, B. Woodside, J.R. Green, G. Coppola, N. Salmaso. Translatomic database of cortical astroglia across male and female mouse development reveals two distinct developmental phenotypes (2020). \textit{Cell Reports}. (Submitted)\\
+
+
+[J6] \textbf{{\underline{{F. Charih}}}}, J. R. Green, K. K. Biggar. \siteurl{Machine Learning-Driven Identification of Novel Lysine Methylation Sites with MethylSight}{https://doi.org/10.1016/j.xpro.2020.100135} (2020). \textit{Star Protocols}. \\
+
+
+[J5] K. K. Biggar*, \textbf{{\underline{{F. Charih}}}}*, H. Liu, Y. B. Ruiz-Blanco, L. Stalker, A. Chopra, J. Connolly, K. Frensemier, M. Galka, Q. Fang, C. Wynder, W. L. Standford, J. R. Green, and S. S-C. Li. \siteurl{Proteome-wide Prediction of Lysine Methylation Reveals Novel Histone Marks and Outlines the Methyllysine Proteome}{https://doi.org/10.1016/j.celrep.2020.107896} (2020). \textit{Cell Reports} 32(107896). (*Co-first authors)\\
+
+
+[J4] \textbf{{\underline{{F. Charih}}}}, M. Bromwich, A. E. Mark, R. Lefrançois, and J. R. Green. \siteurl{Data-Driven Audiogram Classification for Mobile Audiometry}{https://doi.org/10.1038/s41598-020-60898-3} (2020). \textit{Scientific Reports} 10(3962). \\
+
+
+[J3] S. Sarvan, A. Yeung, \textbf{{\underline{{F. Charih}}}}, A. Stintzi, and J.-F. Couture. \siteurl{Crystal structure of Campylobacter jejuni peroxide regulator}{https://doi.org/10.1007/s10534-019-00177-5} (2018). \textit{BioMetals} 32(3) 491-500. \\
+
+
+[J2] S. Sarvan, \textbf{{\underline{{F. Charih}}}}, J. Butcher, J. S. Brunzelle, A. Stintzi, and J.-F. Couture. \siteurl{Crystal structure of Campylobacter jejuni peroxide regulator}{https://doi.org/10.1002/1873-3468.13120} (2018). \textit{FEBS Letters} 592(13) 2351-2360. \\
+
+
+[J1] S. Sarvan, \textbf{{\underline{{F. Charih}}}}, M. Askoura, J. Butcher, J. S. Brunzelle, A. Stintzi, and J.-F. Couture. \siteurl{Functional insights into the interplay between DNA interaction and metal coordination in ferric uptake regulators}{https://doi.org/10.1038/s41598-018-25157-6} (2018). \textit{Scientific Reports} 8(1) 1-14. \\
+
+
+\textit{Conference Proceedings}\\
+
+\nopagebreak
+
+[C5] K. Dick, \textbf{{\underline{{F. Charih}}}}, J. Woo, J. R. Green. \siteurl{Gas Prices of America: The Machine-Augmented Crowd-Sourcing Era}{https://doi.org/10.1109/CRV50864.2020.00029}. \textit{17th Conference on Computer and Robot Vision}, Ottawa, Canada, May 2020.\\
+
+
+[C4] R. Selzler, A. Smith, \textbf{{\underline{{F. Charih}}}}, A. Boyle, J. Holly, C. Bridgewater, M. Besemann, D. Curran, A. D. C. Chan, and J. R. Green. \siteurl{Exploratory Analysis of Ultra-Short-Term Heart Rate Variability Features in Virtual Rehabilitation Sessions}{https://doi.org/10.1109/MeMeA49120.2020.9137133}. \textit{2020 IEEE International Symposium on Medical Measurements and Applications (MeMeA)}, Bari, Italy, June 2020.\\
+
+
+[C3] \textbf{{\underline{{F. Charih}}}}, A. Steeves, M. Bromwich, A. E. Mark, R. Lefrançois, and J. R. Green. \siteurl{Applications of Machine Learning Methods in Retrospective Studies on Hearing}{https://doi.org/10.1109/LSC.2018.8572268r}. \textit{Proceedings of the 2018 IEEE Life Sciences Conference}, Montréal, Canada, October 2018.\\
+
+
+[C2] \textbf{{\underline{{F. Charih}}}}, M. Bromwich, R. Lefrançois, A. E. Mark, and J. R. Green. \siteurl{Mining Audiograms to Improve the Interpretability of Automated Audiometry Measurements}{https://doi.org/10.1109/MeMeA.2018.8438746}. \textit{Proceedings of the 2018 IEEE International Symposium on Medical Measurements and Applications (MeMeA)}, Rome, Italy, June 2018.\\
+
+
+[C1] K. Dick, \textbf{{\underline{{F. Charih}}}}, Y. Souley Dosso, L. Russell, and J. R. Green. \siteurl{Systematic Street View Sampling: High Quality Annotation of Power Infrastructure in Rural Ontario}{https://doi.org/10.1109/CRV.2018.00028}. \textit{Proceedings of the 2018 15th Conference on Computer and Robot Vision (CRV)}, Toronto, Canada, May 2018.\\
+
+
+
+\textit{Other Manuscripts (e.g. pre-prints, theses, etc.)}\\
+
+\nopagebreak
+
+[O2] \textbf{{\underline{{F. Charih}}}}. \siteurl{Machine Learning in Audiology: Applications and Implications}{https://curve.carleton.ca/873548bb-f077-49d4-a5a6-9a69fddf1284}. \textit{Master's thesis}, Carleton University, Ottawa, ON, December 2018, (170 pages).  (Defended without revisions, and was awarded the Carleton University Senate medal)\\
+
+
+[O1] K. Dick, \textbf{{\underline{{F. Charih}}}}, Y. Souley Dosso, L. Russell, and J. R. Green. Towards Energy Infrastructure Image Seg-mentation Using Deep Learning. \textit{Technical Report prepared for Natural Resources Canada}, Carleton University, Ottawa, ON, April 2018, (88 pages). \\
+
+
+\header{Presentations and Workshops}
+
+\nopagebreak
+
+\poster{AI in biology and biomedical engineering (guest lecture)}{ECOR1055}{Ottawa, ON}{December 2nd, 2019}{PW}{6}\\
+
+
+\poster{X-ray crystallography and computational biochemistry (guest lecture)}{BIOC3202}{Ottawa, ON}{November 22nd, 2019}{PW}{5}\\
+
+
+\poster{Introductory Data Analysis with Pandas}{Lecture Series (IEEE EMBS Carleton)}{Ottawa, ON}{October 16th, 2019}{PW}{4}\\
+
+
+\poster{Building interactive visualizations in the browser with D3.js}{Lecture Series (IEEE EMBS Carleton)}{Ottawa, ON}{February 6th, 2019}{PW}{3}\\
+
+
+\poster{Machine learning in Audiology (guest lecture)}{HLTH2001 and HLTH4102 (Carleton University)}{Ottawa, ON}{November 2018, 2019}{PW}{2}\\
+
+
+\poster{MethylSight: A Computational Approach to the Elucidation of the Methyllysine Proteome}{21st Chemistry and Biochemistry Graduate Research Conference}{Montreal, QC}{November 9th, 2018}{PW}{1}\\
+
+
+
+\header{Selected Posters}
+
+\nopagebreak
+
+\poster{Machine Learning in Audiology: Applications and Implications}{Ottawa-AI Alliance Workshop}{Ottawa, ON}{October 19th, 2018}{P}{2}\\
+
+
+\poster{Extending the SHOEBOX Audiometry mobile audiometer with an automated audiogram classification system}{Life Science Day 2.0, Carleton University}{Ottawa, ON}{May 30th, 2018}{P}{1}\\
+
+
+
+\header{Awards and Honours}
+
+\nopagebreak
+\award{Douglas Millar Scholarship}{Dean of the FGPA (Carleton)}{3,200 CAD}{2020}{Awarded yearly to an outstanding graduate student in engineering}\\
+
+\award{Postgraduate Scholarship-Doctoral (PGS-D)}{NSERC}{63,000 CAD}{2019}{Awarded to high potential researchers to pursue doctoral studies}\\
+
+\award{Ontario Graduate Scholarship}{Carleton University}{15,000 CAD}{2019}{Declined in favour of NSERC PGS-D award}\\
+
+\award{Carleton University Senate Medal}{Carleton University}{}{2019}{Awarded for outstanding academic achievement at the graduate level (1 medal/faculty awarded)}\\
+
+\award{Ph.D. Entrance Scholaship}{Carleton University}{2,000 CAD}{2018}{}\\
+
+\award{CREATE-BEST Scholarship}{NSERC}{5,000 CAD}{2017}{}\\
+
+\award{Engage/VIP-I Grant}{NSERC, OCE and Clearwater Clinical Ltd.}{50,000 CAD}{2017}{Co-authored the proposal for the grant awarded to Prof. James R. Green}\\
+
+\award{M.A.Sc. Entrance Scholaship}{Carleton University}{2,000 CAD}{2017}{}\\
+
+\award{Protein Modeling Contest}{University of Ottawa}{100 CAD}{2014}{}\\
+
+\award{B.Sc. Entrance Scholarship}{University of Ottawa}{2,000 CAD}{2011}{}\\
+
+
+\header{Research Mentoring}
+
+\nopagebreak
+I have had the great pleasure to act as a mentor to the following students:\\
+
+\mentoring{Abhinav Yalamanchili}{M.Eng. Student}{Machine vision to digitize audiogram images (with WSIB Ontario)}{Summer 2020}\\
+\mentoring{Ahmed Abdelrazik}{Undergraduate Student}{Development of an ergonomic audiogram digitization tool (with WSIB Ontario)}{Summer 2020}\\
+\mentoring{Pratyush Singh}{Undergraduate Student}{Machine vision to digitize audiogram images}{Summer 2018}\\
+\mentoring{Ashlynn Steeves}{Undergraduate Student}{Using kNN to impute values in incomplete audiograms}{Winter 2018}\\
+
+\header{Other}
+
+\nopagebreak
+\award{Judge}{Ottawa Regional Science Fair}{}{2019}{}\\
+
+\award{Communications Officer}{Carleton University Engineering in Medicine and Biology Society}{}{2018-2019}{}\\
+
+\award{Judge}{Canada Wide Science Fair}{}{2018}{}\\
+
+
+\header{Languages}
+\begin{itemize}
+	\itemsep0em
+  \item French (native)
+  \item English (fluent)
+  \item Arabic (elementary conversational skills)
+\end{itemize}
+
+\header{Relevant skills}
+\nopagebreak
+
+\textbf{High-performance computing}
+\begin{itemize}
+  \item Development of concurrent software for scientific applications using low level languages (Rust, C, Java) and high level languages (Python)
+  \item Multithreading (OpenMP)
+  \item Distributed computing (MPI)
+  \item General-purpose GPU programming (GPGPU)
+\end{itemize}
+
+\textbf{Statistical data analysis/visualization:}
+\begin{itemize}
+  \item Frequentist and bayesian modelling
+  \item Data processing and exploration
+  \item Interactive data visualization with D3.js
+	\item Machine learning (supervised and unsupervised)
+	\item Deep learning
+\end{itemize}
+
+
+\textbf{Bioinformatics:}
+\begin{itemize}
+  \item Application of machine learning techniques to biological datasets
+  \item Sequence alignment
+  \item Protein modelling and analysis
+	\item Protein-ligand docking
+\end{itemize}
+
+
+\textbf{Web development:}
+\begin{itemize}
+  \item Development and maintenance of web infrastructures (web servers, REST APIs, databases, websites) in the cloud (AWS/Google Cloud)
+	\item Creation of clean, maintainable web applications using modern web technologies (React.js, Express.js, Flask, Postgresql, Docker).
+\end{itemize}
+\end{document}
+
+
+% Local Variables:
+% TeX-engine: luatex
+% End:

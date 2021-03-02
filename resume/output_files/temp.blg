@@ -1,0 +1,9 @@
+[0] Config.pm:304> INFO - This is Biber 2.12
+[0] Config.pm:307> INFO - Logfile is 'output_files/temp.blg'
+[40] biber-darwin:315> INFO - === Fri Feb  7, 2020, 13:03:15
+[77] Biber.pm:371> INFO - Reading 'output_files/temp.bcf'
+[150] Biber.pm:889> INFO - Found 0 citekeys in bib section 0
+[158] Utils.pm:193> WARN - The file 'output_files/temp.bcf' does not contain any citations!
+[164] bbl.pm:636> INFO - Writing 'output_files/temp.bbl' with encoding 'UTF-8'
+[164] bbl.pm:739> INFO - Output to output_files/temp.bbl
+[165] Biber.pm:110> INFO - WARNINGS: 1

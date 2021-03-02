@@ -1,0 +1,34 @@
+.headshot {
+    height: 160px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+.name {
+    display: bold;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.shortBio {
+    text-align: center;
+}
+
+.social {
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+}
+
+.line {
+    width: 50%;
+    margin: 0px auto;
+}
+
+.newsContainer {
+    width: 90%;
+    margin: 20px auto;
+}
