@@ -4,14 +4,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-react-i18next`,
-      options: {
-        path: `${__dirname}/src/locales`,
-        languages: [`en`, `fr`],
-        defaultLanguage: `en`,
-      },
-    },
     `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,

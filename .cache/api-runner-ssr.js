@@ -2,9 +2,6 @@ var plugins = [{
       plugin: require('/Users/fcharih/my-website/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/fcharih/my-website/node_modules/gatsby-plugin-react-i18next/gatsby-ssr'),
-      options: {"plugins":[],"path":"/Users/fcharih/my-website/src/locales","languages":["en","fr"],"defaultLanguage":"en"},
-    },{
       plugin: require('/Users/fcharih/my-website/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
       options: {"plugins":[],"trackingId":"UA-131754811-1","head":false,"anonymize":false,"respectDNT":false,"exclude":[],"pageTransitionDelay":0},
     }]
