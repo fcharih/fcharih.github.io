@@ -18,7 +18,7 @@ export default ({}) => {
         <Link to="/music">Music</Link>
         <Link to="/cv">CV</Link>
         <Link to="/blog">Blog</Link>
-        <Link to={`/fr${location.pathname}`}>🇫🇷 Français</Link>
+        {/*<Link to={`/fr${location.pathname}`}>🇫🇷 Français</Link*/}
       </nav>
     );
   } else {
@@ -29,7 +29,7 @@ export default ({}) => {
         <Link to="/fr/music">Musique</Link>
         <Link to="/fr/cv">CV</Link>
         <Link to="/fr/blog">Blog</Link>
-        <Link to={location.pathname.replace("/fr", "")}>🇬🇧 English</Link>
+        {/*<Link to={location.pathname.replace("/fr", "")}>🇬🇧 English</Link>*/}
       </nav>
     );
   }
