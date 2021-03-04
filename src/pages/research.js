@@ -109,7 +109,7 @@ const ResearchPage = ({ location }) => {
             </li>
           </ol>
         </p>
-        <img className={styles.abstractImage} src="/static/abstract.png" />
+        <img className={styles.abstractImage} src="/img/thesis-summary.png" />
       </div>
       <div className={styles.pastResearch} style={show("en")}>
         <h2>Previous work</h2>
