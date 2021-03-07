@@ -37,9 +37,11 @@ const IndexPage = ({}) => {
         Canadien 🇨🇦.
       </div>
       <div className={styles.social}>
-        <a>Email</a>
-        <a>Scholar</a>
-        <a>Github</a>
+        <a href="mailto:francois@charih.ca">Email</a>
+        <a href="https://scholar.google.ca/citations?user=6Ist2oUAAAAJ&hl=en">
+          Scholar
+        </a>
+        <a href="https://github.com/fcharih/">Github</a>
       </div>
       <hr className={styles.line} />
       <div className={styles.newsContainer}>
